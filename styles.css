@@ -1,0 +1,409 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    background: radial-gradient(#FFD071, #FFC144);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    position: sticky;
+    padding: 2rem;
+    z-index: 5;
+}
+
+.logo {
+    float: left;
+    font-weight: 800;
+    margin-left: 2.3rem;
+}
+
+.social-icons {
+    float: right;
+    margin-right: 2.3rem;
+}
+
+.social-icons a {
+    margin-left: 15px;
+    color: #000;
+}
+
+.hero {
+    text-align: left;
+    padding: 14rem 20px;
+    position: relative;
+    display: flex;
+}
+
+.naruto img {
+    max-width: 40%; /* Adjust this value to resize the image */
+    position: absolute;
+   
+    transform: translateX(40%); /* Optional: Adjusts alignment */
+}
+
+.hero-buttons {
+    margin-top: 20px;
+    margin-left: 2.0rem;
+}
+
+.name-link{
+    text-decoration: none;
+    color: #000;
+}
+
+
+.name {
+    font-weight: 800;
+    font-size: 72px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    display: inline-block;
+    white-space: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 4.5s steps(40) 0.5s 1 normal both;
+    cursor: pointer;
+}
+
+.heythere {
+    font-weight: 600;
+    font-size: 24px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-left: 2.3rem;
+}
+
+.jobdesc {
+    margin-top: 0;
+    padding-top: 0;
+    margin-left: 2.3rem;
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+}
+
+.wannahire {
+    margin-left: 2.3rem;
+    margin-top: 5rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.5rem;
+}
+
+
+
+
+
+/* buttons */
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 14px;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #472F07; /* Base button color */
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    z-index : 3;
+}
+
+.button:hover {
+    background-color: #472F07; /* Darker shade on hover */
+    color: #fff;
+    padding-right: 40px; /* Add some padding to make room for the arrow */
+}
+
+.button::after {
+    content: '→';
+    position: absolute;
+    right: -30px; /* Initially hide the arrow */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.button:hover::after {
+    right: 15px; /* Move the arrow into view */
+    opacity: 1;
+}
+
+
+
+
+/* About Page */
+
+.about {
+    position: relative;
+    padding: 4rem 3rem;
+    background-image: url('assets/Vector 1.png'); /* Make sure this path is correct */
+    /* background-position: bottom center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFF;
+    z-index: 1;
+    overflow: visible;
+}
+
+/* .about h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: #fff;
+} */
+
+.aboutme{
+    font-size: 28px;
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.aboutp {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 60rem;
+    color: #ffffff;
+}
+
+.about .container {
+    position: relative;
+    z-index: 2;
+    padding-top: 3rem;
+}
+
+.experiencecont{
+    padding-bottom: 20px;
+}
+
+.exptitle{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.expperiod{
+    font-style: italic;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.expdesc{
+    font-size: 14px;
+    width: 70%;
+}
+
+.headsup{
+    margin-top: 2rem;
+    padding-top: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
+/* Projects Section */
+
+.projects{
+    padding: 4rem 3rem;
+}
+
+
+.table{
+    text-align: left;
+}
+
+.th{
+    text-align: left;
+}
+
+.project-title{
+    text-align: left;
+}
+
+.project-desc{
+    margin: 0;
+    
+}
+
+.frameworks{
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 4px;
+    color: #444343;
+}
+
+.exploreproj{
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+
+/* End Card */
+
+.contact{
+    
+    position: relative;
+    padding: 4rem 3rem;
+    background-image: url('assets/Vector 1.png'); /* Make sure this path is correct */
+    /* background-position: bottom center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFF;
+    z-index: 1;
+    overflow: visible;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #FFF; /* White text for the header */
+}
+
+.contact p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #E5E5E5; /* Slightly lighter text for paragraph */
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-icons a {
+    display: inline-block;
+}
+
+.contact-icons img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+
+.contact-icons img:hover {
+    transform: scale(1.2); /* Slightly increase the size on hover */
+}
+
+.quoteintro{
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.quote {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #FFD700; /* Gold color for the quote text */
+    margin-top: 3rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .contact p {
+        font-size: 1rem;
+    }
+
+    .contact-icons img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .quote {
+        font-size: 1rem;
+    }
+}
+
+
+/* Footer */
+
+footer{
+    background-color: #3A2603;
+    color: #e0ceae;
+    text-align: center;
+    font-style: italic;
+    padding-bottom: 4px;
+}
+
+
+/* Paper Plane
+#paper-plane {
+    position: fixed; /* Fixed so it flies across the viewport */
+    /* top: 50%;
+    left: -100px; /* Start the plane off-screen */
+    /* transform: translateY(-50%);
+} */
+
+/* #paper-plane img {
+    width: 100px; /* Size of the paper plane */
+
+/* Trail styling (optional) */
+/* Dotted trail styling */
+/* .trail-dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50%; /* Making the dots circular */
+/* 
+@keyframes drawTrail {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+} */ 
+
+/* Scroll Text Animation */
+
+.svg-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 100vh;
+    margin-right: 50px;
+    z-index : 2;
+    overflow: hidden;
+}
+
+#my-svg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    opacity: 30;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
