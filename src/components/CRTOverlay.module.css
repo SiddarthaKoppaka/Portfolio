@@ -1,0 +1,101 @@
+/* Container for the overlay - sits on top of everything */
+.overlayContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    pointer-events: none;
+    /* Let clicks pass through */
+    overflow: hidden;
+}
+
+/* Scanlines */
+.scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.1) 50%);
+    /* Reduced from 0.25 to 0.1 */
+    background-size: 100% 4px;
+    z-index: 10;
+}
+
+/* Vignette / Screen Curvature styling */
+.vignette {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.5);
+    /* Reduced from 0.9 to 0.5 */
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.2) 100%);
+    /* Reduced from 0.4 to 0.2 */
+    z-index: 20;
+}
+
+/* Rolling Bar (Hum Bar) */
+.scanlineRolling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0) 50%,
+            rgba(0, 0, 0, 0.1) 50%,
+            rgba(0, 0, 0, 0.1));
+    background-size: 100% 12px;
+    animation: roll 10s linear infinite;
+    opacity: 0.08;
+    /* Reduced from 0.15 to 0.08 */
+    z-index: 15;
+}
+
+@keyframes roll {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 1000px;
+    }
+}
+
+/* Subtle Flicker */
+.flicker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0.05;
+    /* Reduced from 0.1 to 0.05 */
+    animation: flicker 0.15s infinite;
+    z-index: 30;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.03;
+        /* Reduced */
+    }
+
+    50% {
+        opacity: 0.06;
+        /* Reduced */
+    }
+
+    100% {
+        opacity: 0.03;
+        /* Reduced */
+    }
+}
